@@ -1,0 +1,9 @@
+[
+  { "moderator_rating_id": "861b4ff2-5ff3-4bde-828f-749882ad0109", "rating_value": 1, "comment": "Ist immer schlecht drauf...", "created_at": "2020-09-01", "moderator_id": "c84e21de-9b4e-4f73-b671-13556708f881", "user_id": "8d7a9b1a-6e2b-4a7f-9b42-1e2f3a4b5c6d" },
+  { "moderator_rating_id": "7e894cdb-6271-46c2-b193-bfed0b2507ed", "rating_value": 3, "comment": "Sympathische Stimme, gibt's nicht überall", "created_at": "2025-01-31", "moderator_id": "c84e21de-9b4e-4f73-b671-13556708f881", "user_id": "2f1c3d4e-5b6a-4978-9c01-0a1b2c3d4e5f" },
+  { "moderator_rating_id": "954bf6c5-7228-481b-9369-23fc8dafa842", "rating_value": 4, "comment": "Ich liebe diesen Moderator", "created_at": "2026-02-28", "moderator_id": "c84e21de-9b4e-4f73-b671-13556708f881", "user_id": "c3b2a190-7d6e-4c5b-9a88-1234567890ab" },
+  { "moderator_rating_id": "20d21e0f-4784-40f6-83fd-1911bbfdfc29", "rating_value": 2, "comment": "Ich habe sie schon 2 mal live gesehen", "created_at": "2025-12-25", "moderator_id": "60febf06-d150-4e4b-8158-ba2b98dddb0d", "user_id": "c3b2a190-7d6e-4c5b-9a88-1234567890ab" },
+  { "moderator_rating_id": "eb547b13-6d50-46df-ac67-dfd07eaf3a34", "rating_value": 2, "comment": "Verhaspelt sich dauernd - das nervt", "created_at": "2024-06-30", "moderator_id": "60febf06-d150-4e4b-8158-ba2b98dddb0d", "user_id": "c3b2a190-7d6e-4c5b-9a88-1234567890ab" },
+  { "moderator_rating_id": "63f81a57-f780-4624-9eb7-91ffaf8c7ee9", "rating_value": 5, "comment": "Super!", "created_at": "2026-03-14", "moderator_id": "c69ac63e-b45a-40f0-96e1-7ecca7e9e013", "user_id": "8d7a9b1a-6e2b-4a7f-9b42-1e2f3a4b5c6d" }
+  
+]
