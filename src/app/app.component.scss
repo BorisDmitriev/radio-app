@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  height: 100dvh;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-rows: 64px 1fr 64px;
+  height: 100dvh;
+  background: #f8f9fb;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  h1 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.app-content {
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  a.active {
+    font-weight: 600;
+    color: #000;
+  }
+}
