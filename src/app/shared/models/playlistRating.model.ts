@@ -1,4 +1,4 @@
-export interface User {
+export interface PlaylistRating {
   playlist_rating_id: string; // UUID
   playlist_id: string; // UUID
   rating_value: number;

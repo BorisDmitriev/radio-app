@@ -1,4 +1,4 @@
-export interface User {
+export interface ModeratorRating {
   moderator_rating_id: string; // UUID
   rating_value: number;
   comment: string;
