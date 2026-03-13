@@ -48,3 +48,65 @@
     color: #000;
   }
 }
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+  padding: 0 16px;
+
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  background: #f1f5f9;
+  font-size: 0.85rem;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.user-role {
+  color: #64748b;
+}
+
+.logout-button {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #f1f5f9;
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: background 0.2s;
+}
+
+.logout-button:hover {
+  background: #e2e8f0;
+}

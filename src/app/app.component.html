@@ -1,40 +1,39 @@
 <div class="app-shell">
   <header class="app-header">
-    <h1>Radio App</h1>
+    <div class="header-left">
+      <h1 class="app-title">Radio App</h1>
+    </div>
+
+    <div class="header-right" *ngIf="currentUser$ | async as user">
+      <div class="user-chip">
+        <span class="user-name">{{ user.name }}</span>
+        <span class="user-role">{{ user.role }}</span>
+      </div>
+
+      <button
+        class="logout-button"
+        (click)="logout()"
+        aria-label="Logout"
+      >
+        ⎋
+      </button>
+    </div>
   </header>
 
   <main class="app-content">
     <router-outlet></router-outlet>
   </main>
 
-  <nav class="bottom-nav">
-    <a
-      routerLink="/now-playing"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Jetzt
-    </a>
+  <nav class="bottom-nav" *ngIf="currentUser$ | async as user">
+    <ng-container *ngIf="user.role === 'listener'">
+      <a routerLink="/now-playing" routerLinkActive="active">Jetzt</a>
+      <a routerLink="/playlist-rating" routerLinkActive="active">Playlist</a>
+      <a routerLink="/song-request" routerLinkActive="active">Wunsch</a>
+      <a routerLink="/moderator-rating" routerLinkActive="active">Moderation</a>
+    </ng-container>
 
-    <a
-      routerLink="/playlist-rating"
-      routerLinkActive="active"
-    >
-      Playlist
-    </a>
-
-    <a
-      routerLink="/song-request"
-      routerLinkActive="active"
-    >
-      Wunsch
-    </a>
-
-    <a
-      routerLink="/moderator-rating"
-      routerLinkActive="active"
-    >
-      Moderation
-    </a>
+    <ng-container *ngIf="user.role === 'moderator'">
+      <a routerLink="/moderator-dashboard" routerLinkActive="active">Dashboard</a>
+    </ng-container>
   </nav>
 </div>
