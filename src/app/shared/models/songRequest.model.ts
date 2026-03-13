@@ -1,7 +1,6 @@
 export interface SongRequest {
   request_id: string; // UUID
-  requested_title: string;
-  requested_artist: string;
+  track_id: string; 
   created_at: Date;
   user_id: string //UUID
 }
