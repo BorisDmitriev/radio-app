@@ -1,1 +1,26 @@
-<p>now-playing works!</p>
+<div class="now-playing-page" *ngIf="nowPlaying$ | async as nowPlaying; else noTrack">
+  <p class="page-label">Aktuell läuft</p>
+
+  <section class="track-card">
+    <div class="track-cover">
+      <span>♪</span>
+    </div>
+
+    <div class="track-content">
+      <h2>{{ nowPlaying.track.title }}</h2>
+      <p class="artist">{{ nowPlaying.track.artist }}</p>
+
+      <div class="meta">
+        <span>{{ nowPlaying.track.album }}</span>
+        <span>•</span>
+        <span>{{ nowPlaying.started_at | date:'shortTime' }}</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<ng-template #noTrack>
+  <div class="empty-state">
+    <p>Aktuell ist kein Titel verfügbar.</p>
+  </div>
+</ng-template>
