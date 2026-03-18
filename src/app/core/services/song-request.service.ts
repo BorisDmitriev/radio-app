@@ -23,6 +23,16 @@ export class SongRequestService {
     //schreibt nicht in die JSON-Datei, sondern nur in den App-State -> Da kein echtes Backend wird das Speichern nur simuliert
     addRequest(request: SongRequest): void {
         this.requestSubject.next(request);
+
+/*
+        // Falls an das echte Backend angebunden
+        addRequest(request: SongRequest): Observable<SongRequest> {
+            return this.http.post<SongRequest>(
+                'http://localhost:3000/song-requests',
+                request
+            );
+        }
+*/
     }
 
 

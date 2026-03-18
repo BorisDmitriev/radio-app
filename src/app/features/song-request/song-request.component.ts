@@ -88,6 +88,18 @@ export class SongRequestComponent {
 
     this.songRequestService.addRequest(request);
 
+/*
+    // Falls an das echte Backend angebunden
+    this.songRequestService.addRequest(request).subscribe({
+      next: () => {
+        this.successMessage = "Songwunsch erfolgreich gesendet!";
+      },
+      error: () => {
+        this.errorMessage = "Fehler beim Senden.";
+      }
+    });
+*/
+
     // Testen, ob der State richtig gespeichert wurde in der Browser-Konsole
     console.log("SongRequest erstellt:", request);
 
