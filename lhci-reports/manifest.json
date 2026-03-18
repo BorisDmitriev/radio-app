@@ -1,0 +1,50 @@
+[
+  {
+    "url": "http://localhost:4200/now-playing",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-now_playing-2026_03_13_22_01_57.report.html",
+    "jsonPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-now_playing-2026_03_13_22_01_57.report.json",
+    "summary": {
+      "performance": 0.57,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.9
+    }
+  },
+  {
+    "url": "http://localhost:4200/playlist-rating",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-playlist_rating-2026_03_13_22_02_10.report.html",
+    "jsonPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-playlist_rating-2026_03_13_22_02_10.report.json",
+    "summary": {
+      "performance": 0.57,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.9
+    }
+  },
+  {
+    "url": "http://localhost:4200/song-request",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-song_request-2026_03_13_22_02_22.report.html",
+    "jsonPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-song_request-2026_03_13_22_02_22.report.json",
+    "summary": {
+      "performance": 0.57,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.9
+    }
+  },
+  {
+    "url": "http://localhost:4200/moderator-rating",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-moderator_rating-2026_03_13_22_02_33.report.html",
+    "jsonPath": "C:\\Users\\Cia\\Desktop\\Studium\\4. Semester\\Projekt Mobile Software Engineering 2\\Radio-App-Projekt\\radio-app\\lhci-reports\\localhost-moderator_rating-2026_03_13_22_02_33.report.json",
+    "summary": {
+      "performance": 0.57,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.9
+    }
+  }
+]

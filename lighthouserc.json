@@ -1,0 +1,29 @@
+{
+  "ci": {
+    "collect": {
+        "url": [
+            "http://localhost:4200/now-playing",
+            "http://localhost:4200/playlist-rating",
+            "http://localhost:4200/song-request",
+            "http://localhost:4200/moderator-rating"
+        ],
+        "settings": {
+            "emulatedFormFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "chromeFlags": "--user-data-dir=./chrome-profile"
+        },
+        "numberOfRuns": 3
+    },
+    "assert": {
+        "preset": "lighthouse:recommended",
+        "assertions": {
+            "metrics.cumulative-layout-shift": ["error", {"maxNumericValue": 0.1}],
+            "metrics.largest_contentful-paint": ["error", {"maxNumericValue": 2500}]
+        }
+    },
+    "upload": {
+        "target": "filesystem",
+        "outputDir": "./lhci-reports"
+    }
+  }
+}

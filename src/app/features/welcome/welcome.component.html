@@ -1,0 +1,82 @@
+<div class="welcome-page">
+  <div class="welcome-card">
+    <div class="brand">
+      <span class="brand-badge">Radio App</span>
+      <h1>Willkommen</h1>
+      <p>
+        Starte als Hörer direkt mit deinem Namen oder melde dich als Moderator an.
+      </p>
+    </div>
+
+    <section class="login-section">
+      <h2>Als Hörer starten</h2>
+      <p class="section-text">
+        Schnellzugang ohne Registrierung.
+      </p>
+
+      <div class="form-column">
+        <label for="listenerName" class="sr-only">Name</label>
+        <input
+          id="listenerName"
+          [(ngModel)]="listenerName"
+          type="text"
+          placeholder="Dein Name"
+          autocomplete="name"
+        />
+
+        <button
+          type="button"
+          class="primary-button"
+          (click)="continueAsListener()"
+          [disabled]="!listenerName.trim()"
+        >
+          Als Hörer starten
+        </button>
+      </div>
+    </section>
+
+    <div class="divider">
+      <span>Moderator</span>
+    </div>
+
+    <section class="login-section">
+      <h2>Moderator Login</h2>
+      <p class="section-text">
+        Anmeldung mit bestehenden Zugangsdaten.
+      </p>
+
+      <div class="form-column">
+        <label for="moderatorUsername" class="sr-only">Benutzername</label>
+        <input
+          id="moderatorUsername"
+          [(ngModel)]="moderatorUsername"
+          type="text"
+          placeholder="Benutzername"
+          autocomplete="username"
+        />
+
+        <label for="moderatorPassword" class="sr-only">Passwort</label>
+        <input
+          id="moderatorPassword"
+          [(ngModel)]="moderatorPassword"
+          type="password"
+          placeholder="Passwort"
+          autocomplete="current-password"
+        />
+
+        <button
+          type="button"
+          class="secondary-button"
+          (click)="loginAsModerator()"
+          [disabled]="!moderatorUsername.trim() || !moderatorPassword.trim()"
+        >
+          Als Moderator anmelden
+        </button>
+      </div>
+
+      <p *ngIf="moderatorError" class="error-message">
+        Benutzername oder Passwort ist falsch.
+      </p>
+    </section>
+  </div>
+</div>
