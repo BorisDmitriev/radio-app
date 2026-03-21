@@ -20,7 +20,7 @@ export class SongRequestService {
 
     request$ = this.requestSubject.asObservable();
 
-    //schreibt nicht in die JSON-Datei, sondern nur in den App-State -> Da kein echtes Backend wird das Speichern nur simuliert
+    //schreibt nicht in die JSON-Datei, sondern nur in der App-State -> Da kein echtes Backend wird das Speichern nur simuliert
     addRequest(request: SongRequest): void {
         this.requestSubject.next(request);
 
