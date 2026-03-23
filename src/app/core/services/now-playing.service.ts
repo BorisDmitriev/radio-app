@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import nowPlayingSeed from '../../../assets/mock-data/now-playing.json';
-import tracksSeed from '../../../assets/mock-data/tracks.json';
+import tracksSeed from '../../../assets/mock-data/track.json';
 import {NowPlaying, NowPlayingView} from '../../shared/models/now-playing.model';
 import { Track } from '../../shared/models/track.model';
 
