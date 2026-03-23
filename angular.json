@@ -108,6 +108,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "radio-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "radio-app:serve:production"
+            }
+          }
         }
       }
     }
