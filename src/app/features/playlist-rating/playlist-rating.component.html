@@ -1,27 +1,23 @@
 <div class="playlist-rating-page" *ngIf="playlists$ | async as playlists; else noPlaylists">
   <p class="page-label">Playlists</p>
-  <section class="playlist-card" *ngFor="let playlist of playlists">
-    <div class="playlist-cover">
-      <span>▶</span>
-    </div>
-    <div class="playlist-content">
-      <h2>{{ playlist.name }}</h2>
-      <p class="description">{{ playlist.description }}</p>
-    </div>
-    <div class="playlist-rating">
-      <button class="rating-button">
-        <span>
-          {{'★'.repeat(4)}}{{'☆'.repeat(5-4)}}
-        </span>
-      </button>
-    </div>
-  </section>
+    <section class="playlist-card" *ngFor="let playlist of playlists">
+      <div class="playlist-cover">
+        <span>▶</span>
+      </div>
+      <div class="playlist-content">
+        <h2>{{ playlist.name }}</h2>
+        <p class="description">{{ playlist.description }}</p>
+      </div>
+      <div class="playlist-rating">
+        <button class="rating-button" (click) = "openRatingDialog(playlist)">
+          <span>✎</span>
+        </button>
+      </div>
+    </section>
 </div>
 
 <ng-template #noPlaylists>
   <div class="empty-state">
     <p>Keine Playlists vorhanden</p>
-
   </div>
-
 </ng-template>

@@ -70,6 +70,14 @@
   border-color: grey;
 }
 
+.rating-button span span {
+  color: #d1d5db;
+}
+
+.rating-button span span.filled {
+  color: #facc15;
+}
+
 .meta {
   display: flex;
   flex-wrap: wrap;
