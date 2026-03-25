@@ -1,4 +1,4 @@
-<div class="now-playing-page" *ngIf="nowPlaying$ | async as nowPlaying; else noTrack">
+<div class="now-playing-page" data-testid="now-playing-page" *ngIf="nowPlaying$ | async as nowPlaying; else noTrack">
   <p class="page-label">Aktuell läuft</p>
 
   <section class="track-card">
