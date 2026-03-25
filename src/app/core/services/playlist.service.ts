@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import playlistSeed from '../../../assets/mock-data/playlists.json';
+import playlistSeed from '../../../assets/mock-data/playlist.json';
 import { Playlist, PlaylistView } from '../../shared/models/playlist.model';
 
 @Injectable({
