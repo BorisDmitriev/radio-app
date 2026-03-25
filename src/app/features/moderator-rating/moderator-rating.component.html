@@ -1,1 +1,23 @@
-<p>moderator-rating works!</p>
+<div class="moderator-rating-page" *ngIf="moderators$ | async as moderators; else noModerators">
+  <p class="page-label">Moderatoren</p>
+    <section class="moderator-card" *ngFor="let moderator of moderators">
+      <div class="moderator-cover">
+        <div class="head"></div>
+        <div class="body"></div>
+      </div>
+      <div class="moderator-content">
+        <h2>{{ moderator.name }}</h2>
+      </div>
+      <div class="moderator-rating">
+        <button class="rating-button" (click) = "openRatingDialog(moderator)">
+          <span>✎</span>
+        </button>
+      </div>
+    </section>
+</div>
+
+<ng-template #noModerators>
+  <div class="empty-state">
+    <p>Keine Moderatoren vorhanden</p>
+  </div>
+</ng-template>

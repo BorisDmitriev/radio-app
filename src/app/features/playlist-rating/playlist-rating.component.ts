@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import { Playlist, PlaylistView } from '../../shared/models/playlist.model';
+import { PlaylistView } from '../../shared/models/playlist.model';
 import { PlaylistService } from '../../core/services/playlist.service';
-import { map, of } from 'rxjs';
+import { map } from 'rxjs';
 import { NgIf, NgFor, AsyncPipe } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RatingDialogComponent } from '../rating-dialog/rating-dialog.component';
-import { PlaylistRating, PlaylistRatingView } from '../../shared/models/playlistRating.model';
+import { PlaylistRatingView } from '../../shared/models/playlistRating.model';
 import { PlaylistRatingService } from '../../core/services/playlist-rating.service';
 import { AuthService } from '../../core/services/auth.service';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-playlist-rating',
   standalone: true,
-  imports: [NgIf, NgFor, AsyncPipe, MatDialogModule],
+  imports: [NgIf, NgFor, AsyncPipe],
   templateUrl: './playlist-rating.component.html',
   styleUrl: './playlist-rating.component.scss'
 })
@@ -63,7 +61,7 @@ export class PlaylistRatingComponent {
       }
     });
 
-    dialogRef.afterClosed().subscribe(result => { //sollte UI updaten
+    dialogRef.afterClosed().subscribe(result => { 
       if (result) {
         this.playlistRatingService.addRating(
           playlist.playlist_id,

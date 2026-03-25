@@ -23,10 +23,10 @@ export class RatingDialogComponent implements OnInit {
     this.rating = star === this.rating ? 0 : star;
   }
   
-  
   close() {
     this.dialogRef.close();
   }
+
   submit() {
     this.dialogRef.close({
       rating: this.rating,

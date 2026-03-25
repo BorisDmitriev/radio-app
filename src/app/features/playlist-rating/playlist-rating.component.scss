@@ -70,20 +70,9 @@
   border-color: grey;
 }
 
-.rating-button span span {
-  color: #d1d5db;
-}
-
-.rating-button span span.filled {
-  color: #facc15;
-}
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  color: #6b7280;
-  font-size: 0.9rem;
+.rating-button span {
+  color: #C0C0C0;
+  font-size: 2rem;
 }
 
 .empty-state {

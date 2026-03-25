@@ -13,12 +13,20 @@ export class PlaylistRatingService {
     private readonly playlistRatings: PlaylistRating[] = playlistRatingSeed.map(p => ({
         ...p,
         created_at: new Date(p.created_at)
-    }));
+    })); 
     private readonly playlistRatingSubject = new BehaviorSubject<PlaylistRating[]>(
         this.playlistRatings
     );
 
     readonly playlistRatings$ = this.playlistRatingSubject.asObservable();
+
+    get testSubject() {
+        return this.playlistRatingSubject; 
+    }
+
+    resetRatingsForTest(ratings: PlaylistRating[] = []) {
+        this.playlistRatingSubject.next(ratings); 
+    }
 
     getPlaylistRatingView(): PlaylistRatingView[] {
         return this.playlistRatingSubject.value.map(p => ({
