@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-button {
+
+  button, .button {
     min-width: 48px;
     min-height: 48px;
-
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  }

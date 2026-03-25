@@ -1,1 +1,145 @@
-<p>moderator-dashboard works!</p>
+<h2>Moderator Dashboard</h2>
+
+<!-- Bewertungen für Moderatoren -->
+<div class="ratings-section" data-testid="moderator-dashboard-page">
+  <h3>Moderator-Bewertungen</h3>
+
+  <label for="moderator"><strong>Moderator wählen: </strong></label>
+
+  @if (moderators$ | async; as moderators) {
+
+  <select (change)="onModeratorChange($event)">
+    @for (mod of moderators; track mod.moderator_id) {
+    <option [value]="mod.moderator_id">
+      {{ mod.name }}
+    </option>
+    }
+  </select>
+
+  }
+
+
+  @if (stats$ | async; as stats) {
+  <p>
+    <strong>Durchschnittliche Bewertung:</strong>
+    <span class="stars">
+      <!--[].constructor erzeugt einen Array mit 4 Plätzen-->
+      @for (star of [].constructor(getRoundedRating(stats.averageRating)); track $index) {
+      &#11088;
+      }
+    </span> ({{ stats.averageRating }})
+  </p>
+
+  <p>
+    <strong>Anzahl Stimmen:</strong>
+    {{ stats.voteCount }}
+  </p>
+
+  <h4>Neueste Bewertungen:</h4>
+
+  <ul>
+    @for (rating of stats.latestRatings; track rating.moderator_rating_id) {
+    <li>
+      @for (star of [].constructor(getRoundedRating(rating.rating_value)); track $index) {
+      &#11088;
+      }
+      {{ rating.comment }}
+      ({{ rating.created_at | date:'shortDate' }})
+    </li>
+    }
+  </ul>
+  }
+
+</div>
+
+
+<!-- Bewertungen für Playlists -->
+<div class="ratings-section">
+  <h3>Playlist-Bewertungen</h3>
+
+  <label for="playlist"><strong>Playlist wählen: </strong></label>
+
+  @if (playlists$ | async; as playlists) {
+
+  <select (change)="onPlaylistChange($event)">
+    @for (playlist of playlists; track playlist.playlist_id) {
+    <option [value]="playlist.playlist_id">
+      {{ playlist.name }}
+    </option>
+    }
+  </select>
+
+  }
+
+
+  @if (playlistStats$ | async; as playlistStats) {
+  <p>
+    <strong>Durchschnittliche Bewertung:</strong>
+    <span class="stars">
+      <!-- erzeugt ein Array mit N Elementen für die Sterne -->
+      @for (star of [].constructor(getRoundedRating(playlistStats.averageRating)); track $index) {
+      &#11088;
+      }
+    </span> ({{ playlistStats.averageRating }})
+  </p>
+
+  <p>
+    <strong>Anzahl Stimmen:</strong>
+    {{ playlistStats.voteCount }}
+  </p>
+
+  <h4>Neueste Bewertungen:</h4>
+
+  <ul>
+    @for (rating of playlistStats.latestRatings; track rating.playlist_rating_id) {
+    <li>
+      @for (star of [].constructor(getRoundedRating(rating.rating_value)); track $index) {
+      &#11088;
+      }
+      {{ rating.comment }}
+      ({{ rating.created_at | date:'shortDate' }})
+    </li>
+    }
+  </ul>
+  }
+
+</div>
+
+
+<!-- Songwünsche einsehen -->
+<div class="ratings-section">
+
+  <h3>Songwünsche</h3>
+
+  @if (songRequests$ | async; as songRequests) {
+
+  <ul>
+    @for (request of songRequests; track request.request_id) {
+
+      <li>
+
+        <div class="song-title">{{ getTrackName(request.track_id) }} ({{ request.count }} {{ request.count === 1 ? 'Wunsch' : 'Wünsche' }})</div>
+
+        <div class="song-date">
+          {{ request.created_at | date:'dd.MM.yyyy' }}
+        </div>
+
+        @if (!request.played) {
+          <button class="mark-played-btn" (click)="markRequestAsPlayed(request.request_id)">
+            Als gespielt markieren
+          </button>
+        }
+
+        @if (request.played) {
+        <span>&#10004; Gespielt</span>
+        }
+
+      </li>
+
+    }
+  </ul>
+
+  }
+
+
+</div>

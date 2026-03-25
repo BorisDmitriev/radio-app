@@ -1,1 +1,46 @@
-<p>song-request works!</p>
+<div class="ratings-section">
+
+    <h2>Songwunsch senden</h2>
+
+    <form (ngSubmit)="submitRequest()">
+
+        <div>
+            <label><strong>Titel oder Interpret:</strong></label>
+            <input type="text" name="searchTerm" placeholder="Song suchen..." [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" />
+        </div>
+
+        <div>
+            <label><strong>Nachricht (optional):</strong></label>
+            <textarea rows="3" name="message" [(ngModel)]="message"></textarea>
+        </div>
+
+        <button type="submit">
+            Song wünschen
+        </button>
+
+    </form>
+
+    @if (filteredTracks.length > 0) {
+    <ul>
+        @for (track of filteredTracks; track track.track_id) {
+        <li (click)="selectTrack(track)">
+            {{ track.artist }} - {{ track.title }}
+        </li>
+        }
+    </ul>
+    }
+
+
+    <!-- Statusmeldungen -->
+    @if (successMessage) {
+    <div class="success-message">
+        {{ successMessage }}
+    </div>
+    }
+
+    @if (errorMessage) {
+    <div class="error-message">
+        {{ errorMessage }}
+    </div>
+    }
+</div>

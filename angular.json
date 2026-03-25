@@ -28,7 +28,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
@@ -89,7 +95,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
@@ -97,6 +109,17 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "radio-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "radio-app:serve:production"
+            }
           }
         }
       }

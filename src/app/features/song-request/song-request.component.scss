@@ -1,0 +1,66 @@
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+.ratings-section {
+  max-width: 500px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+li {
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+li:hover,
+li:active {
+  background: #e0e0e0;
+}
+
+// Statusmeldungen
+.success-message {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #2e7d32;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #c62828;
+}
