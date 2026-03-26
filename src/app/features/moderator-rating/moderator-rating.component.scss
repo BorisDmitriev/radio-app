@@ -1,0 +1,114 @@
+:host {
+  display: block;
+}
+.moderator-rating-page {
+  padding: 8px 0;
+}
+
+.page-label {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.moderator-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.moderator-cover {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: #C0C0C0;
+  display: inline-block;
+  position: relative;
+}
+
+.head {
+    width: 32%;
+    height: 32%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.body {
+    width: 60%;
+    height: 35%;
+    background-color: whitesmoke;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.moderator-content {
+  min-width: 0;
+}
+
+.moderator-content h2 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.moderator-rating {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.rating-button {
+  min-width: 72px;
+  min-height: 55px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  background: white;
+  color: grey;
+  border-color: grey;
+}
+
+.rating-button span {
+  color: #C0C0C0;
+  font-size: 2rem;
+}
+
+.empty-state {
+  padding: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+@media (max-width: 480px) {
+  .moderator-card {
+    padding: 16px;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .moderator-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+  }
+
+  .moderator-content h2 {
+    font-size: 1.2rem;
+  }
+}
